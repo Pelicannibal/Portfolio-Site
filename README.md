@@ -1,2 +1,2 @@
 # Portfolio Site
-This webapp is Dominick's portfolio
+This webapp is Dominick's portfolio.
