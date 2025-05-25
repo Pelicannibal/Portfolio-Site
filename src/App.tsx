@@ -1,8 +1,9 @@
+
 function App() {
   return (
-    <>
-      <b class=""></b>
-    </>
+    <div className="bg-darkBg">
+      Hello!
+    </div>
   )
 }
 
