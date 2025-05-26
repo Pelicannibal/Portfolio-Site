@@ -1,22 +1,25 @@
+/** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'media',
+  darkMode: 'class',
   content: [
-    'index.html',
-    './src/**/*.{js,ts,jsx,tsx}'
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        darkBg: '#040F0F',
-        lightBox: '#C7CEDB',
-        tooltip: '#F0F2EF',
-        openCard: '#2D3A3A'
+        schemeA: "#040F0F",
+        schemeB: "#C7CEDB",
+        highlightCol: "#2BA84A",
+        selectedCol: "#248232",
+        cardBg: "#2D3A3A",
       },
       borderRadius: {
-        lg: '16px',
-        full: '9999px'
-      }
-    }
+        default: '16px',
+        full: '9999px',
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 }
+
