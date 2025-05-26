@@ -10,9 +10,9 @@ type CardProps = {
 export const Card: React.FC<CardProps> = ({image, title, description, technologies}) => {
     return (
         <div>
-            <img />
-            <h3></h3>
-            <p></p>
+            <img src={image}/>
+            <h3>{title}</h3>
+            <p>{description}</p>
             <div>
                 {technologies.map((tech:string) => (
                     <span>
