@@ -1,10 +1,19 @@
 import React from "react";
+import { useState } from "react";
 
 type SocialItem = {
     link: string;
     icon: string;
 }
-let socials: {[name: string]: SocialItem} = {
+type Social = { [social: string]: SocialItem }
+
+type ContactIconProps = {
+    name: string,
+    social: SocialItem,
+    setHoveredSocial: (name: string | null) => void;
+}
+
+let socials: Social = {
     "LinkedIn" : {
         link: import.meta.env.LINKEDIN,
         icon: "path"
@@ -13,17 +22,37 @@ let socials: {[name: string]: SocialItem} = {
         link: import.meta.env.GITHUB,
         icon: "path"
     },
+    "YouTube" : {
+        link: import.meta.env.YOUTUBE,
+        icon: "path"
+    }
 }
 
-type ContactProps = {
-    email: string,
-    socials: {[name: string]: SocialItem}[],
-};
-
-export const ContactBar: React.FC<ContactProps> = ({ email, socials }) => {
+const ContactIcon: React.FC<ContactIconProps> = ({ name, social, setHoveredSocial }) => {
     return (
-        <div>
-
+        <div
+        onMouseEnter={() => setHoveredSocial(name)}
+        onMouseLeave={() => setHoveredSocial(null)}
+        >
+            <img src={social.icon} alt={`${name} icon`} />
         </div>
+    )
+}
+
+export const ContactBar = () => {
+    const [hoveredSocial, setHoveredSocial] = useState<string | null>(null);
+
+    return (
+        <>
+            <div>
+                {Object.entries(socials).map(([ name, social ]) => 
+                    <ContactIcon key={name} name={name} social={social} setHoveredSocial={setHoveredSocial}/>
+                )}
+            </div>
+            <div>
+                {hoveredSocial}
+            </div>
+        </>
+        
     )
 }
