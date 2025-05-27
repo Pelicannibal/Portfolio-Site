@@ -1,5 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import GithubLogo from "/src/assets/Github.png";
+import YoutubeLogo from "/src/assets/Youtube.png";
+import LinkedinLogo from "/src/assets/Linkedin.png";
+
 
 type SocialItem = {
     link: string;
@@ -15,24 +19,26 @@ type ContactIconProps = {
 
 let socials: Social = {
     "LinkedIn" : {
-        link: import.meta.env.LINKEDIN,
-        icon: "path"
+        link: import.meta.env.VITE_LINKEDIN,
+        icon: LinkedinLogo
     },
     "Github" : {
-        link: import.meta.env.GITHUB,
-        icon: "path"
+        link: import.meta.env.VITE_GITHUB,
+        icon: GithubLogo
     },
     "YouTube" : {
-        link: import.meta.env.YOUTUBE,
-        icon: "path"
+        link: import.meta.env.VITE_YOUTUBE,
+        icon: YoutubeLogo
     }
 }
 
 const ContactIcon: React.FC<ContactIconProps> = ({ name, social, setHoveredSocial }) => {
     return (
         <div
+        className="px-10 py-3"
         onMouseEnter={() => setHoveredSocial(name)}
         onMouseLeave={() => setHoveredSocial(null)}
+        onClick={() => window.open(social.link)}
         >
             <img src={social.icon} alt={`${name} icon`} />
         </div>
@@ -44,7 +50,7 @@ export const ContactBar = () => {
 
     return (
         <>
-            <div>
+            <div className="flex justify-between items-center bg-schemeA dark:bg-schemeB px-6 rounded-full shadow-md sticky top-0 z-50">
                 {Object.entries(socials).map(([ name, social ]) => 
                     <ContactIcon key={name} name={name} social={social} setHoveredSocial={setHoveredSocial}/>
                 )}
