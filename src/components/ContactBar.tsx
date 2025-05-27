@@ -35,7 +35,7 @@ let socials: Social = {
 const ContactIcon: React.FC<ContactIconProps> = ({ name, social, setHoveredSocial }) => {
     return (
         <div
-        className="px-10 py-3"
+        className="mx-10 my-3"
         onMouseEnter={() => setHoveredSocial(name)}
         onMouseLeave={() => setHoveredSocial(null)}
         onClick={() => window.open(social.link)}
@@ -49,7 +49,7 @@ export const ContactBar = () => {
     const [hoveredSocial, setHoveredSocial] = useState<string | null>(null);
 
     return (
-        <>
+        <div className="absolute pt-10 left-1/2 -translate-x-1/2 top-0">
             <div className="flex justify-between items-center bg-schemeA dark:bg-schemeB px-6 rounded-full shadow-md sticky top-0 z-50">
                 {Object.entries(socials).map(([ name, social ]) => 
                     <ContactIcon key={name} name={name} social={social} setHoveredSocial={setHoveredSocial}/>
@@ -58,7 +58,7 @@ export const ContactBar = () => {
             <div>
                 {hoveredSocial}
             </div>
-        </>
+        </div>
         
     )
 }
