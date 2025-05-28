@@ -12,7 +12,7 @@ export default {
         schemeB: "#C7CEDB",
         highlightCol: "#2BA84A",
         selectedCol: "#248232",
-        cardBg: "#2D3A3A",
+        Gunmetal: "#2D3A3A",
       },
       borderRadius: {
         default: '16px',

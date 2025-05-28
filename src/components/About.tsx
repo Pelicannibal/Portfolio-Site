@@ -17,13 +17,13 @@ const Avatar = () => {
 
 const Skills = () => {
   return (
-    <div className="grid grid-cols-2 gap-4 w-160 max-w-full">
+    <div className="grid grid-cols-2 gap-4 w-80">
       <SkillCard logo={Alert} name="C#" description="Cooler C++" />
       <SkillCard logo={Alert} name="Unity" description="A Game Engine" />
       <SkillCard logo={Alert} name="TypeScript" description="A Better JavaScript" />
       <SkillCard logo={Alert} name="React" description="Web Dev Framework" />
-      <SkillCard logo={Alert} name="Tailwind" description="Lazy CSS Library" />
-      <SkillCard logo={Alert} name="AWS" description="Cloud Computing by Bezos" />
+      <SkillCard logo={Alert} name="Tailwind" description="Lazy CSS" />
+      <SkillCard logo={Alert} name="AWS" description="Cloud Computing" />
     </div>
   );
 };
