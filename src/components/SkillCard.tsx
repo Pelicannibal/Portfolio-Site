@@ -8,12 +8,12 @@ type SkillCardProps = {
 
 export const SkillCard: React.FC<SkillCardProps> = ({ logo, name, description }) => {
     return (
-        <div className="bg-highlightCol rounded-full h-16">
+        <div className="bg-highlightCol rounded-full h-10 w-40">
             <div className="flex">
-                <img src={logo} />
-                <b>{name}</b>
+                <img src={logo} className="h-6 pr-2"/>
+                <b className="text-sm">{name}</b>
             </div>
-            <p>{description}</p>
+            <p className="text-xs">{description}</p>
         </div>
     )
 }

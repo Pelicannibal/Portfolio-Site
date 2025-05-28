@@ -17,7 +17,7 @@ const Avatar = () => {
 
 const Skills = () => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-fit">
+    <div className="grid grid-cols-2 gap-4 w-160 max-w-full">
       <SkillCard logo={Alert} name="C#" description="Cooler C++" />
       <SkillCard logo={Alert} name="Unity" description="A Game Engine" />
       <SkillCard logo={Alert} name="TypeScript" description="A Better JavaScript" />
