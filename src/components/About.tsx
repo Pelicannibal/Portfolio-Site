@@ -1,4 +1,7 @@
+import { SkillCard } from "./SkillCard";
 import Profile from "/src/assets/ProfilePhoto.png";
+
+import Alert from "/src/assets/icons/Alert.png";
 
 const Avatar = () => {
     return (
@@ -12,10 +15,23 @@ const Avatar = () => {
     )
 }
 
-export const About = () => {
+const Skills = () => {
+  return (
+    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-fit">
+      <SkillCard logo={Alert} name="C#" description="Cooler C++" />
+      <SkillCard logo={Alert} name="Unity" description="A Game Engine" />
+      <SkillCard logo={Alert} name="TypeScript" description="A Better JavaScript" />
+      <SkillCard logo={Alert} name="React" description="Web Dev Framework" />
+      <SkillCard logo={Alert} name="Tailwind" description="Lazy CSS Library" />
+      <SkillCard logo={Alert} name="AWS" description="Cloud Computing by Bezos" />
+    </div>
+  );
+};
+
+export const About = ({ defClass } : {defClass: string}) => {
     
     return (
-        <div>
+        <div className={defClass}>
             <Avatar />
 
             <p className="w-72 text-left">
@@ -24,6 +40,8 @@ export const About = () => {
             <p className="w-72 text-left my-4">
                 📍 Poland
             </p>
+
+            <Skills />
         </div>
     )
 }

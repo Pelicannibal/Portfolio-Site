@@ -2,10 +2,9 @@ import React from "react";
 import { useRef, useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 
-import GithubLogo from "/src/assets/Github.png";
-import YoutubeLogo from "/src/assets/Youtube.png";
-import LinkedinLogo from "/src/assets/Linkedin.png";
-
+import GithubLogo from "/src/assets/icons/socials/Github.png";
+import YoutubeLogo from "/src/assets/icons/socials/Youtube.png";
+import LinkedinLogo from "/src/assets/icons/socials/Linkedin.png";
 
 type SocialItem = {
     link: string;
