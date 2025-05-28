@@ -1,3 +1,4 @@
+import { About } from "./components/About";
 import { ContactBar } from "./components/ContactBar";
 
 function App() {
@@ -5,11 +6,11 @@ function App() {
   return (
     <div className="dark">
       <ContactBar />
-      <div className='bg-slate-200 dark:bg-schemeA text-schemeA dark:text-schemeB'>
-        test
-      </div>
-      <div className='bg-schemeA'>
-        test2
+
+      <div className="absolute top-52 flex left-1/2 -translate-x-1/2">
+        <About />
+        
+        <></>
       </div>
     </div>
   )
