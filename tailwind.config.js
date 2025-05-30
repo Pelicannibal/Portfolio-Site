@@ -10,6 +10,7 @@ export default {
       colors: {
         schemeA: "#040F0F",
         schemeB: "#C7CEDB",
+        WhiteSmoke: "#F0F2EF",
         highlightCol: "#2BA84A",
         selectedCol: "#248232",
         Gunmetal: "#2D3A3A",

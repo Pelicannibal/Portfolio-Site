@@ -9,13 +9,17 @@ type CardProps = {
 
 export const Card: React.FC<CardProps> = ({image, title, description, technologies}) => {
     return (
-        <div>
-            <img src={image}/>
-            <h3>{title}</h3>
-            <p>{description}</p>
-            <div>
+        <div className="relative bg-WhiteSmoke rounded-default text-schemeA py-20 px-48">
+            <div className="mb-1">
+                <h3 className="absolute top-10 left-10 text-xl font-bold">{title}</h3>  
+                <img src={image} className="absolute top-0 -right-0 w-1/2 h-36 object-cover"/>
+            </div>
+            <p className="text-sm mb-2">{description}</p>
+            <div className="absolute flex gap-2 m-3 bottom-0 left-0">
                 {technologies.map((tech:string) => (
-                    <span>
+                    <span
+                        key={tech}
+                        className="bg-highlightCol text-white text-xs px-2 py-1 rounded-full">
                         {tech}
                     </span>
                 ))}
