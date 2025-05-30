@@ -79,12 +79,12 @@ export const ContactBar = () => {
     };
 
     return (
-        <div className="absolute top-0 left-0 w-full flex justify-center pointer-events-none">
+        <div className="navigation-container">
             <div
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={() => setHoveredSocial(null)}
                 className="relative pt-10 pointer-events-auto">
-                <div className="flex justify-between items-center bg-schemeA dark:bg-schemeB px-6 rounded-full shadow-md sticky top-0 z-50">
+                <div className="navigation">
                     {Object.entries(socials).map(([ name, social ]) => 
                         <ContactIcon
                             key={name}

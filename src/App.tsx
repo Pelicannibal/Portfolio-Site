@@ -5,7 +5,7 @@ import { Projects } from "./Slides";
 function App() {
   
   return (
-    <div className="dark">
+    <div className="dark bg-schemeB dark:bg-schemeA">
       <ContactBar />
 
       <div className="absolute top-52 grid grid-cols-3 left-1/2 -translate-x-1/2">
