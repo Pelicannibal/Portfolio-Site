@@ -8,8 +8,8 @@ const Avatar = () => {
         <>
             <img src={Profile} className="rounded-full h-44" />
             <div className="bg-schemeB rounded-default w-44 my-4">
-                <b className="text-schemeA">Dominick Skupien</b>
-                <p className="text-schemeA">Full Stack Developer</p>
+                <b className="text-schemeA ml-3">Dominick Skupien</b>
+                <p className="text-schemeA ml-3">Full Stack Developer</p>
             </div>
         </>
     )
@@ -34,10 +34,10 @@ export const About = ({ defClass } : {defClass: string}) => {
         <div className={defClass}>
             <Avatar />
 
-            <p className="w-72 text-left">
+            <p className="w-72 text-left text-schemeA dark:text-schemeB">
                 I am a Full Stack Developer who likes to make indie games in my free time.
             </p>
-            <p className="w-72 text-left my-4">
+            <p className="w-72 text-left my-4 text-schemeA dark:text-schemeB">
                 📍 Poland
             </p>
 

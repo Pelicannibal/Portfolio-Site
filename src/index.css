@@ -7,11 +7,11 @@
 }
 
 .navigation {
-  @apply flex justify-between items-center bg-schemeA dark:bg-schemeB px-6 rounded-full shadow-md sticky top-0 z-50
+  @apply flex justify-between items-center bg-highlightCol dark:bg-schemeB px-6 rounded-full shadow-md sticky top-0 z-50
 }
 
 .card {
-  @apply relative bg-WhiteSmoke rounded-default text-schemeA py-20 px-48
+  @apply relative bg-WhiteSmoke rounded-default text-schemeA py-32 px-48 w-48
 }
 
 .badge {

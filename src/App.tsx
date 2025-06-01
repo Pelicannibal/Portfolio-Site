@@ -5,14 +5,16 @@ import { Projects } from "./Slides";
 function App() {
   
   return (
-    <div className="dark bg-schemeB dark:bg-schemeA">
-      <ContactBar />
+    <div className="dark">
+      <div className="bg-schemeB dark:bg-schemeA min-h-screen">
+        <ContactBar />
 
-      <div className="absolute top-52 grid grid-cols-3 left-1/2 -translate-x-1/2">
-        <About defClass="col-span-1 pr-4"/>
-        
-        <div className="pl-4 col-span-2">
-          <Projects/>
+        <div className="absolute top-52 flex justify-center left-1/2 -translate-x-1/2 w-3/4">
+          <About defClass="col-span-1 pr-4"/>
+
+          <div className="pl-4 col-span-1">
+            <Projects/>
+          </div>
         </div>
       </div>
     </div>
