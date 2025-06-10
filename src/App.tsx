@@ -10,9 +10,9 @@ function App() {
         <ContactBar />
 
         <div className="absolute top-52 flex justify-center left-1/2 -translate-x-1/2 w-3/4">
-          <About defClass="col-span-1 pr-4"/>
+          <About defClass="pr-4"/>
 
-          <div className="pl-4 col-span-1">
+          <div className="pl-4">
             <Projects/>
           </div>
         </div>

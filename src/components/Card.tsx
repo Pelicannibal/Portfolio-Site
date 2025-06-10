@@ -14,7 +14,7 @@ export const Card: React.FC<CardProps> = ({image, title, description, technologi
                 <h3 className="absolute top-10 left-10 text-xl font-bold">{title}</h3>  
                 <img src={image} className="absolute top-0 -right-0 w-1/2 h-36 object-cover"/>
             </div>
-            <p className="text-sm mb-2 w-32 left-0">{description}</p>
+            <p className="absolute text-sm p-4 left-0">{description}</p>
             <div className="absolute flex gap-2 m-3 bottom-0 left-0">
                 {technologies.map((tech:string) => (
                     <span
